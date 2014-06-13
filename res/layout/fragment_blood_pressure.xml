@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customParentLayout" >
+    
+    <!-- Device details container-->
+    <include layout="@layout/common_device_details_view" />
+    
+    <!-- values container for heart rate, temperature and blood pressure -->
+    <RelativeLayout
+        android:id="@+id/containerValuesBloodPressure"
+        style="@style/containerValuesMultiple"
+        android:layout_below="@id/containerDeviceDetails" >
+        
+        <TextView
+            android:id="@+id/labelSystolic"
+            style="@style/labelMultiple"
+			android:layout_alignParentTop="true"
+            android:text="@string/systolic" />
+        <TextView
+            android:id="@+id/valueSystolic"
+            style="@style/valueMultiple"
+			android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/valueDiastolic" 
+            android:text="@string/no_multiple_data_found" />
+                
+        <TextView
+            android:id="@+id/labelDiastolic"
+            style="@style/labelMultiple"
+            android:layout_below="@id/labelSystolic"
+            android:text="@string/diastolic" />
+        <TextView
+            android:id="@+id/valueDiastolic"
+            style="@style/valueMultiple"
+            android:layout_below="@id/valueSystolic"
+            android:layout_toRightOf="@id/labelDiastolic" 
+            android:text="@string/no_multiple_data_found" />
+        
+        <TextView
+            android:id="@+id/labelArterialPressure"
+            style="@style/labelMultiple"
+            android:layout_below="@id/labelDiastolic"
+            android:text="@string/arterial_pressure" />
+        <TextView
+            android:id="@+id/valueArterialPressure"
+            style="@style/valueMultiple"
+            android:layout_below="@id/valueDiastolic"
+            android:layout_toRightOf="@id/labelArterialPressure" 
+            android:text="@string/no_multiple_data_found" />
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/chartLayout"
+        style="@style/chartLayout"     
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <include layout="@layout/common_btn_view" />
+</RelativeLayout>

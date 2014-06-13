@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customParentLayout"
+    tools:context=".ChoiceActivity" >
+    
+	<!-- Image is Focusable to consume auto button highlight -->
+    <ImageView
+        android:id="@+id/logoLaird"
+        style="@style/logoLaird" 
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+        android:contentDescription="@string/image_descr_logo_laird" />
+    
+    <LinearLayout
+		android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true" >
+		
+   		<ImageView
+            android:id="@+id/iconServiceHeartRate"
+            style="@style/iconService"
+            android:src="@drawable/icon_heart_rate"
+            android:contentDescription="@string/image_descr_icon_service_heart_rate" />
+        <ImageView
+            android:id="@+id/iconServiceTemp"
+            style="@style/iconService"
+            android:src="@drawable/icon_temp"
+            android:contentDescription="@string/image_descr_icon_service_temperature" />
+        <ImageView
+            android:id="@+id/iconServiceBloodPressure"
+            style="@style/iconService" 
+            android:src="@drawable/icon_blood_pressure"
+            android:contentDescription="@string/image_descr_icon_service_blood_pressure" />
+        <ImageView
+            android:id="@+id/iconServiceProximity"
+            style="@style/iconService" 
+            android:src="@drawable/icon_proximity"
+            android:contentDescription="@string/image_descr_icon_service_proximity" />
+	</LinearLayout>
+	
+	<ImageView
+	    android:id="@+id/iconContactUs"
+        android:layout_width="@dimen/iconContactUs_size" 
+        android:layout_height="@dimen/iconContactUs_size" 
+        android:layout_alignParentBottom="true" 
+        android:layout_marginBottom="@dimen/iconContactUs_marginBottom" 
+        android:layout_marginLeft="@dimen/iconSettings_marginLeft" 
+        android:adjustViewBounds="true" 
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_contact_us_color" 
+		android:contentDescription="@string/image_descr_icon_contact_us" />
+    
+    <ImageView
+        android:id="@+id/iconSettings"
+        android:layout_width="@dimen/iconSettings_size" 
+        android:layout_height="@dimen/iconSettings_size"
+        android:layout_toRightOf="@id/iconContactUs"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/iconSettings_marginBottom" 
+        android:layout_marginLeft="@dimen/iconSettings_marginLeft" 
+        android:adjustViewBounds="true" 
+        android:scaleType="fitXY" 
+        android:src="@drawable/icon_settings_color" 
+        android:contentDescription="@string/image_descr_icon_settings" />
+    
+    <ImageView
+        android:id="@+id/logoBleSmart"        
+        android:layout_width="@dimen/logoBleSmart_width" 
+        android:layout_height="@dimen/logoBleSmart_height" 
+        android:layout_alignParentBottom="true" 
+        android:layout_alignParentRight="true" 
+        android:layout_marginBottom="@dimen/logoBleSmart_marginBottom" 
+        android:adjustViewBounds="true" 
+        android:scaleType="fitXY" 
+        android:src="@drawable/logo_ble_smart" 
+        android:contentDescription="@string/image_descr_logo_ble_smart" />
+</RelativeLayout>

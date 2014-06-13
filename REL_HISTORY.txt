@@ -1,0 +1,1 @@
+2014-02-26 Play Store REL_v1.19.1.1 - BL600 Toolkit - Fixed Samsung Galaxy error on Connecting state persistency, fixed using threads

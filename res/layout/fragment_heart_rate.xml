@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customParentLayout" >
+    
+    <!-- Device details container-->
+    <include layout="@layout/common_device_details_view" />
+
+    
+
+
+
+	    <TextView
+	        android:id="@+id/valueCharBPM"
+	        style="@style/valueCharacteristic"
+	        android:layout_below="@id/containerDeviceDetails" 
+            android:text="@string/no_single_data_found" />
+	    
+
+        <TextView
+            android:id="@+id/valueCharBodySensor"
+            style="@style/valueMultiple"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/valueCharBPM"
+            android:text="@string/no_multiple_data_found"
+            android:textSize="@dimen/valueCharBodySensor_textSize" />
+        <TextView
+            android:id="@+id/labelBodySensor"
+            style="@style/labelMultiple"
+            android:layout_below="@id/valueCharBPM"
+            android:layout_toLeftOf="@id/valueCharBodySensor"
+            android:text="@string/body_sensor"
+            android:textSize="@dimen/labelBodySensor_textSize" />
+    
+    <LinearLayout 
+        android:id="@+id/chartLayout"
+        style="@style/chartLayout"     
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <include layout="@layout/common_btn_view" />
+</RelativeLayout>

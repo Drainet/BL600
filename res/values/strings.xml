@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BL600 Toolkit</string>
+    <string name="title_activity_fragments_container">BL600 Toolkit</string>
+    <string name="title_activity_settings">Settings</string>
+    
+    <!-- Disclaimer -->
+    <string name="disclaimer_text">Embedded Wireless Solutions from Laird Technologies include 
+        Wi-Fi®, BLuetooth® / Bluetooth Low Energy, and RAMP (Range-Amplified Multipoint) radio modules designed to provide secure, reliable connectivity for business critical mobile devices. 
+        Full details are available at www.lairdtech.com/wireless
+        \n\nThis application is for evaluation purposes only and no representation or warranty is given nor is any to be implied    </string>
+    <string name="btnDecline">Decline</string>
+    <string name="btnAccept">Accept</string>
+    
+    <!-- choices -->
+    <string name="choices">Choices</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="temperature">Temperature</string>
+    <string name="blood_pressure">Blood Pressure</string>
+    <string name="proximity">Proximity</string>
+    
+    <!-- settings -->
+    <string name="run_in_background">Run In Background</string>
+    <string name="version">App Version: 1.19.1.1</string>
+    
+    <!-- connection, searching and disconnection with device -->
+    <string name="connect">Connect</string>
+    <string name="connecting">Connecting</string>
+    <string name="retrieving_data">Retrieving Data</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="searching">Searching..</string>
+    
+    <!-- device details -->
+    <string name="device_details">Device Details</string>
+    <string name="name">Name: </string>
+    <string name="address">Address: </string>
+    <string name="RSSI">RSSI: </string>
+    <string name="battery">Battery: </string>
+    
+    <!-- when values are not found -->
+    <string name="no_single_data_found">-</string>
+    <string name="no_multiple_data_found">N/A</string>
+    
+    <!-- blood pressure labels -->
+    <string name="body_sensor">Sensor: </string>
+    <!-- blood pressure labels -->
+    <string name="systolic">Systolic: </string>
+    <string name="diastolic">Diastolic: </string>
+    <string name="arterial_pressure">Arterial Pressure: </string>
+    
+    <!-- proximity labels -->
+    <string name="tx_power">Tx Power: </string>
+    <string name="link_loss_alert">Link Loss Alert</string>
+    <string name="immediate_alert">Immediate Alert</string>
+    <string name="alert_me">Alert Me</string>
+    
+<!-- images content descriptor strings -->
+    <!-- logos -->
+    <string name="image_descr_logo_laird">Laird Logo</string>
+    <string name="image_descr_logo_ble_smart"></string>
+    <!-- services icons-->
+    <string name="image_descr_icon_service_heart_rate">Heart Rate</string>
+    <string name="image_descr_icon_service_temperature">Temperature</string>
+    <string name="image_descr_icon_service_blood_pressure">Blood Pressure</string>
+    <string name="image_descr_icon_service_proximity">Proximity</string>
+    <!-- other icons -->
+    <string name="image_descr_icon_contact_us">Contact Us</string>
+    <string name="image_descr_icon_settings">Settings</string>
+</resources>

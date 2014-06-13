@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Device details container-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerDeviceDetails"
+    style="@style/containerDeviceDetails" >
+
+	<TextView
+	    android:id="@+id/labelName"
+	    style="@style/label"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentLeft="true"
+	    android:text="@string/name" />
+
+	<TextView
+	    android:id="@+id/valueDeviceName"
+	    android:layout_alignLeft="@+id/valueBattery"
+		android:layout_toRightOf="@id/labelName"
+		android:layout_alignBaseline="@id/labelName"
+	    android:paddingLeft="5dp"
+	    style="@style/value"
+        android:text="@string/no_multiple_data_found" />
+
+	
+	<TextView
+	    android:id="@+id/labelRSSI"
+	    style="@style/label"
+	    android:layout_below="@id/labelName"
+	    android:text="@string/RSSI" />
+
+	<TextView
+	    android:id="@+id/valueDeviceRssi"
+	    android:layout_below="@id/labelName"
+	    android:layout_alignLeft="@+id/valueBattery"
+		android:layout_alignBaseline="@id/labelRSSI"
+	    android:paddingLeft="5dp"
+	    style="@style/value"
+        android:text="@string/no_multiple_data_found" />
+
+	
+	<TextView
+	    android:id="@+id/labelBattery"
+	    style="@style/label"
+	    android:layout_below="@id/labelRSSI"
+	    android:text="@string/battery" />
+	
+	<TextView
+	    android:id="@+id/valueBattery"
+	    android:layout_toRightOf="@id/labelBattery"
+		android:layout_alignBaseline="@id/labelBattery"
+	    android:layout_below="@id/labelRSSI"
+	    android:paddingLeft="5dp"
+	    style="@style/value"
+        android:text="@string/no_multiple_data_found" />
+	
+</RelativeLayout>

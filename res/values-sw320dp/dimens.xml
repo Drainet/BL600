@@ -1,0 +1,81 @@
+<resources>
+    <!-- all screens margins -->
+    <dimen name="activity_horizontal_padding">5dp</dimen>
+    <dimen name="activity_vertical_padding">5dp</dimen>
+    
+    <!-- Laird logo -->
+    <dimen name="logoLaird_marginTop">15dp</dimen>
+    <dimen name="logoLaird_marginBottom">20dp</dimen>
+<!-- disclaimer screen -->
+    <!-- disclaimer main text -->
+    <dimen name="textDisclaimer_marginBottom">0dp</dimen>
+    <dimen name="textDisclaimer_marginHorizontal">5dp</dimen>
+    <dimen name="textDisclaimer_textSize">16sp</dimen>
+    <!-- buttons accept and decline -->
+    <dimen name="btnDisclaimer_marginHorizontal">5dp</dimen>
+    <dimen name="btnDisclaimer_marginBottom">3dp</dimen>
+    <dimen name="btnDisclaimer_textSize">17sp</dimen>
+<!-- settings screen -->
+    <!-- a setting container -->
+    <dimen name="containerASetting_marginTop">65dp</dimen>
+    <dimen name="containerASetting_marginBottom">0dp</dimen>
+    <dimen name="containerASetting_marginLeft">10dp</dimen>
+    <!-- a setting text -->
+    <dimen name="textASetting_textSize">17sp</dimen>
+    <!-- a setting switch -->
+    <dimen name="switchASetting_marginRight">10dp</dimen>
+    <!-- version text -->
+    <dimen name="versionText_textSize">18sp</dimen>
+    <dimen name="versionText_marginBottom">10dp</dimen>
+<!-- fragment_choices.java - choices screen -->
+    <!-- services icons -->
+    <dimen name="iconService_size">80dp</dimen>
+    <!-- contact us icon -->
+    <dimen name="iconContactUs_size">40dp</dimen>
+    <dimen name="iconContactUs_marginBottom">2.5dp</dimen>
+    <!-- settings icon -->
+    <dimen name="iconSettings_size">26dp</dimen>
+    <dimen name="iconSettings_marginBottom">10dp</dimen>
+    <dimen name="iconSettings_marginLeft">10dp</dimen>
+    <!-- BLE logo -->
+    <dimen name="logoBleSmart_width">100dp</dimen>
+    <dimen name="logoBleSmart_height">30dp</dimen>
+    <dimen name="logoBleSmart_marginBottom">10dp</dimen>
+<!-- BLE funcionality screens -->
+    <!-- device details, name, rssi, battery etc -->
+    <dimen name="containerDeviceDetails_marginTop">0dp</dimen>    
+    <dimen name="containerDeviceDetails_marginBottom">30dp</dimen>    
+    <dimen name="label_textSize">18sp</dimen>
+    <dimen name="value_textSize">18sp</dimen>
+    <!-- heart rate measurement specific -->
+    <dimen name="labelBodySensor_textSize">15sp</dimen>
+    <dimen name="valueCharBodySensor_textSize">15sp</dimen>
+    <!-- blood pressure specific -->
+    <dimen name="labelMultiple_textSize">25sp</dimen>
+    <dimen name="valueMultiple_textSize">25sp</dimen>
+    <!-- proximity screen -->
+    <dimen name="containerAlert_marginBottom">50dp</dimen>    
+    <dimen name="containerLinkLossAlert_horizontalMargin">5dp</dimen>
+    <dimen name="containerImmediateAlert_horizontalMargin">5dp</dimen>
+    <dimen name="textTitleAlert_textSize">18sp</dimen>
+    <dimen name="textTitleAlert_marginBottom">5dp</dimen>
+        <!-- button immediate Alert -->
+    <dimen name="btnImmediateAlert_marginLeft">5dp</dimen>
+    <dimen name="btnImmediateAlert_textSize">15sp</dimen>
+        <!-- radio Group -->
+    <dimen name="radioGroup_marginBottom">10dp</dimen>
+        <!-- container TX power -->
+    <dimen name="containerTxPower_marginBottom">60dp</dimen>
+    <!-- 
+    general, for when only one characteristic value is needed
+    for example heart rate and temperature
+    -->
+    <dimen name="valueCharacteristic_textSize">50sp</dimen>
+    <!-- btn connect -->
+    <dimen name="btnConnect_textSize">15sp</dimen>
+    <dimen name="btnConnect_marginBottom">10dp</dimen>
+    <!-- graph -->
+    <dimen name="chartLayout_width">340dp</dimen>
+    <dimen name="chartLayout_height">230dp</dimen>
+    <dimen name="chartLayout_marginBottom">6dp</dimen>    
+</resources>

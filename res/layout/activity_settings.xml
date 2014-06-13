@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customParentLayout"
+    tools:context=".SettingsActivity" >
+    
+    <RelativeLayout
+            android:id="@+id/containerASetting"
+            style="@style/containerASetting" >
+        <TextView
+            android:id="@+id/textASetting"
+            style="@style/textASetting"
+            android:text="@string/run_in_background" />
+        
+        <Switch
+            android:id="@+id/switchRunInBackground"
+            style="@style/switchASetting"
+            android:textOn="ON"
+            android:textOff="OFF"/>
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/versionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/versionText_marginBottom"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="@dimen/versionText_textSize"
+        android:textStyle="bold"
+        android:textColor="#00a0df"
+        android:text="@string/version"/>
+</RelativeLayout>

@@ -1,0 +1,274 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+<!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    
+<!-- all screens parent layout -->
+    <style name="customParentLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/laird_background</item>          
+        <item name="android:paddingBottom">@dimen/activity_vertical_padding</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_padding</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_padding</item>
+        <item name="android:paddingTop">@dimen/activity_vertical_padding</item>
+    </style>
+    
+<!-- disclaimer layout -->
+    <style name="btnDisclaimer">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.32</item>
+        <item name="android:layout_marginBottom">@dimen/btnDisclaimer_marginBottom</item>
+        <item name="android:layout_marginLeft">@dimen/btnDisclaimer_marginHorizontal</item>
+        <item name="android:layout_marginRight">@dimen/btnDisclaimer_marginHorizontal</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/btn_disclaimer_selector</item>
+        <item name="android:textSize">@dimen/btnDisclaimer_textSize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:onClick">btnDisclaimer</item>
+    </style>
+    
+<!-- Settings Screen -->
+    <!-- a setting container -->
+    <style name="containerASetting">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/containerASetting_marginTop</item>
+        <item name="android:layout_marginBottom">@dimen/containerASetting_marginBottom</item>
+        <item name="android:layout_marginLeft">@dimen/containerASetting_marginLeft</item>
+    </style>
+    
+    <!-- a setting text -->
+    <style name="textASetting">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">@dimen/textASetting_textSize</item>
+    </style>
+    
+    <!-- a setting switch button -->
+    <style name="switchASetting">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/switchASetting_marginRight</item>
+    </style>
+    
+<!-- fragment_choices layout -->
+    <style name="logoLaird">
+          <item name="android:layout_width">wrap_content</item>
+          <item name="android:layout_height">wrap_content</item>
+          <item name="android:layout_marginTop">@dimen/logoLaird_marginTop</item>
+          <item name="android:layout_marginBottom">@dimen/logoLaird_marginBottom</item>
+          <item name="android:adjustViewBounds">true</item>
+          <item name="android:scaleType">fitXY</item>
+          <item name="android:src">@drawable/logo_laird_trans</item>
+    </style>
+    
+    <style name="iconService">
+          <item name="android:layout_width">0dp</item>
+          <item name="android:layout_height">@dimen/iconService_size</item>
+          <item name="android:layout_weight">1</item>
+          <item name="android:adjustViewBounds">true</item>
+          <item name="android:scaleType">fitXY</item>
+    </style>
+    
+<!-- layout's with BLE stuff -->
+    <style name="containerDeviceDetails">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/containerDeviceDetails_marginTop</item>
+        <item name="android:layout_marginBottom">@dimen/containerDeviceDetails_marginBottom</item>
+    </style>
+    
+    <style name="label">
+          <item name="android:layout_width">wrap_content</item>
+          <item name="android:layout_height">wrap_content</item>
+          <item name="android:textSize">@dimen/label_textSize</item>
+          <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/value_textSize</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">#00a0df</item>
+    </style>
+
+    <style name="valueCharacteristic">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/no_single_data_found</item>
+        <item name="android:textSize">@dimen/valueCharacteristic_textSize</item>
+        <item name="android:textColor">#00a0df</item>
+    </style>
+    
+    <style name="containerBtnConnect">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    
+    <style name="btnConnect">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/connect</item>
+        <item name="android:textSize">@dimen/btnConnect_textSize</item>
+        <item name="android:background">@drawable/btn_disclaimer_selector</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    
+    <style name="pbSpinnerReadingData">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>   
+        <item name="android:visibility">visible</item> 
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    
+<!-- graph -->
+    <style name="chartLayout">
+        <item name="android:layout_width">@dimen/chartLayout_width</item>        
+        <item name="android:layout_height">@dimen/chartLayout_height</item>
+        <item name="android:layout_marginBottom">@dimen/chartLayout_marginBottom</item>
+        <item name="android:layout_above">@id/containerBtnConnect</item>
+        <item name="android:layout_centerInParent">true</item>        
+    </style>
+    
+<!-- specific blood pressure stuff -->
+    <style name="containerValuesMultiple">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+    
+    <style name="labelMultiple">
+          <item name="android:layout_width">wrap_content</item>
+          <item name="android:layout_height">wrap_content</item>
+          <item name="android:textSize">@dimen/labelMultiple_textSize</item>
+          <item name="android:textColor">#000000</item>
+          <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="valueMultiple">
+          <item name="android:layout_width">wrap_content</item>
+          <item name="android:layout_height">wrap_content</item>
+          <item name="android:paddingLeft">5dp</item>
+          <item name="android:textSize">@dimen/valueMultiple_textSize</item>
+          <item name="android:textColor">#00a0df</item>          
+    </style>
+    
+<!-- specific proximity stuff -->
+    <style name="containerAlert">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/containerAlert_marginBottom</item>
+        <item name="android:layout_above">@id/containerTxPower</item>
+    </style>
+    <style name="containerIndividualAlert">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    
+    <style name="textTitleAlert">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/textTitleAlert_marginBottom</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textTitleAlert_textSize</item>      
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    
+    <style name="radioGroup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/radioGroup_marginBottom</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    
+    <style name="radioBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <!-- action bar with tabs -->
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_actionbartabs</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Actionbartabs</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Actionbartabs</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Actionbartabs</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Actionbartabs</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Actionbartabs</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_actionbartabs</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_actionbartabs</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Actionbartabs</item>
+    </style>
+
+    <style name="ActionBar.Solid.Actionbartabs" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_actionbartabs</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_actionbartabs</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_actionbartabs</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Actionbartabs</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Actionbartabs" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_actionbartabs</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Actionbartabs</item>
+    </style>
+
+    <style name="PopupMenu.Actionbartabs" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbartabs</item> 
+    </style>
+
+    <style name="DropDownListView.Actionbartabs" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_actionbartabs</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Actionbartabs" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_actionbartabs</item>
+    </style>
+
+    <style name="DropDownNav.Actionbartabs" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_actionbartabs</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_actionbartabs</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_actionbartabs</item>
+    </style>
+    
+    <style name="ProgressBar.Actionbartabs" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_actionbartabs</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Actionbartabs" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_actionbartabs</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Actionbartabs.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Actionbartabs</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Actionbartabs</item>
+    </style>
+    
+    
+</resources>

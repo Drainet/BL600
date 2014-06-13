@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/customParentLayout" >
+    
+    <!-- Device details container-->
+    <include layout="@layout/common_device_details_view" />
+
+    
+    <RelativeLayout
+        android:id="@+id/containerRadioButtons"
+        style="@style/containerAlert" >
+    
+	    <RelativeLayout
+	        android:id="@+id/containerLinkLossAlert"
+	        style="@style/containerIndividualAlert"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="@dimen/containerLinkLossAlert_horizontalMargin" >
+	            <TextView 
+	                android:id="@+id/textLinkLossAlert"
+	                style="@style/textTitleAlert"
+	                android:text="@string/link_loss_alert" />
+	            <RadioGroup
+	                android:id="@+id/radioGroupLinkLoss"
+	                style="@style/radioGroup"
+	                android:layout_below="@id/textLinkLossAlert" >
+	                <RadioButton 
+	                    android:id="@+id/radioLinkLossAlertLow"
+	                    style="@style/radioBtn"
+                        android:button="@drawable/button_radio_off"
+	                    />
+	                <RadioButton 
+	                    android:id="@+id/radioLinkLossAlertMedium"
+	                    style="@style/radioBtn"
+                        android:button="@drawable/button_radio_low"
+	                     />
+	                <RadioButton
+	                    android:id="@+id/radioLinkLossAlertHigh"
+	                    style="@style/radioBtn"
+                        android:button="@drawable/button_radio_high"
+	                     />
+	            </RadioGroup>
+	    </RelativeLayout>
+	     <RelativeLayout
+	        android:id="@+id/containerImmediateAlert"
+	        style="@style/containerIndividualAlert"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/containerImmediateAlert_horizontalMargin" >
+	            <TextView
+	                android:id="@+id/textImmediateAlert"
+	                style="@style/textTitleAlert"
+	                android:text="@string/immediate_alert" />
+	            <RadioGroup
+	                android:id="@+id/radioGroupImmediateAlert"
+	                style="@style/radioGroup"
+	                android:layout_below="@id/textImmediateAlert" >
+	                <RadioButton
+	                    android:id="@+id/radioImmediateAlertLow"	                    
+	                    style="@style/radioBtn"
+                        android:button="@drawable/button_radio_off"
+                        
+	                    />
+	                
+	                <RadioButton
+	                    android:id="@+id/radioImmediateAlertMedium"	                    
+	                    style="@style/radioBtn"
+                        android:button="@drawable/button_radio_low"
+	                    />
+	                
+	                <RadioButton
+	                    android:id="@+id/radioImmediateAlertHigh"
+	                    style="@style/radioBtn"	                    
+	                    android:button="@drawable/button_radio_high"
+	                    
+	                    />
+		       </RadioGroup>
+		       
+		       <Button
+		           android:id="@+id/btnImmediateAlert"
+	               android:layout_width="wrap_content"
+	               android:layout_height="wrap_content"
+	               android:layout_marginLeft="@dimen/btnImmediateAlert_marginLeft"
+	               android:text="@string/alert_me"
+	               android:textSize="@dimen/btnImmediateAlert_textSize"
+	               android:background="@drawable/btn_disclaimer_selector"
+		           android:layout_centerHorizontal="true"
+		           android:layout_below="@id/radioGroupImmediateAlert" />
+	    </RelativeLayout>
+	
+     </RelativeLayout>
+     
+    <RelativeLayout
+        android:id="@+id/containerTxPower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:layout_above="@id/containerBtnConnect"
+        android:gravity="center" 
+        android:layout_marginBottom="@dimen/containerTxPower_marginBottom">
+    
+        <TextView
+            android:id="@+id/labelTxPower"
+            style="@style/label"
+            android:text="@string/tx_power" />
+            
+        <TextView
+            android:id="@+id/valueTxPower"
+            style="@style/value"
+            android:layout_toRightOf="@id/labelTxPower"
+            android:layout_centerInParent="true" 
+            android:text="@string/no_multiple_data_found" />
+    </RelativeLayout>
+    
+    
+    <include layout="@layout/common_btn_view" />
+
+</RelativeLayout>
