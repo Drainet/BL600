@@ -27,6 +27,8 @@
     <!-- connection, searching and disconnection with device -->
     <string name="connect">Connect</string>
     <string name="connecting">Connecting</string>
+    <string name="upload">Upload</string>
+    <string name="uploading">Uploading</string>
     <string name="retrieving_data">Retrieving Data</string>
     <string name="disconnect">Disconnect</string>
     <string name="searching">Searching..</string>

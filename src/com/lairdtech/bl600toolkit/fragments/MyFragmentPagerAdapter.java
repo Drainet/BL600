@@ -10,7 +10,7 @@ import android.support.v4.view.ViewPager;
  */
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
-    private final int PAGE_COUNT = 5;
+    private final int PAGE_COUNT = 1;
     private ViewPager mPager;
 	
 	public MyFragmentPagerAdapter(FragmentManager fm, ViewPager mPager) {
@@ -23,23 +23,25 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 	public Fragment getItem(int position) {
 		switch(position){
             case 0:
-                ChoiceFragment choicesFragment = new ChoiceFragment();
-                choicesFragment.setPageAdapterForButtons(mPager);
-                return choicesFragment;
-			case 1:
-				HeartRateFragment hrFragment = new HeartRateFragment();
+            	HeartRateFragment hrFragment = new HeartRateFragment();
 				return hrFragment;
-				
-			case 2:
-				TemperatureFragment tempFragment = new TemperatureFragment();
-				return tempFragment;
-				
-            case 3:
-                BloodPressureFragment bpFragment = new BloodPressureFragment();
-                return bpFragment;
-            case 4:
-                ProximityFragment proximityFragment = new ProximityFragment();
-                return proximityFragment;
+//                ChoiceFragment choicesFragment = new ChoiceFragment();
+//                choicesFragment.setPageAdapterForButtons(mPager);
+//                return choicesFragment;
+//			case 1:
+//				HeartRateFragment hrFragment = new HeartRateFragment();
+//				return hrFragment;
+//				
+//			case 2:
+//				TemperatureFragment tempFragment = new TemperatureFragment();
+//				return tempFragment;
+//				
+//            case 3:
+//                BloodPressureFragment bpFragment = new BloodPressureFragment();
+//                return bpFragment;
+//            case 4:
+//                ProximityFragment proximityFragment = new ProximityFragment();
+//                return proximityFragment;
 		}
 		return null;
 	}

@@ -139,6 +139,17 @@
         <item name="android:layout_centerVertical">true</item>
     </style>
     
+    <style name="btnUpload">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/upload</item>
+        <item name="android:textSize">@dimen/btnConnect_textSize</item>
+        <item name="android:background">@drawable/btn_disclaimer_selector</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    
     <style name="pbSpinnerReadingData">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>   

@@ -24,7 +24,7 @@ import com.lairdtech.bl600toolkit.target.MyTarget;
 
 public class FragmentsContainerActivity extends FragmentActivity{
     public static final int ENABLE_BT_REQUEST_ID = 1;
-    public static final int SET_OFF_SCREEN_PAGE_LIMIT = 4;
+    public static final int SET_OFF_SCREEN_PAGE_LIMIT =1;
     public static final boolean SHOW__APP_TITLE = false;
     public static final boolean SHOW_APP_LOGO = false;
     // in this class BleWrapper is only used for checking if BT/BLE hardware exists and if it's enabled
@@ -65,7 +65,7 @@ public class FragmentsContainerActivity extends FragmentActivity{
             
             @Override
             public void onPageSelected(int position) {
-                mActionBar.setSelectedNavigationItem(position);
+                mActionBar.setSelectedNavigationItem(0);
             }
         });
         
@@ -81,25 +81,25 @@ public class FragmentsContainerActivity extends FragmentActivity{
     
     private void setTabs() {
         Tab tab;
-        tab = mActionBar.newTab().setText(getString(R.string.choices))
-                .setTabListener(mTabListener);
-        mActionBar.addTab(tab);
-        
-        tab = mActionBar.newTab().setText(getString(R.string.heart_rate))
-                .setTabListener(mTabListener);
-        mActionBar.addTab(tab);
+//        tab = mActionBar.newTab().setText(getString(R.string.choices))
+//                .setTabListener(mTabListener);
+//        mActionBar.addTab(tab);
+//        
+//        tab = mActionBar.newTab().setText(getString(R.string.heart_rate))
+//                .setTabListener(mTabListener);
+//        mActionBar.addTab(tab);
 
         tab = mActionBar.newTab().setText(getString(R.string.temperature))
                 .setTabListener(mTabListener);
         mActionBar.addTab(tab);
-
-        tab = mActionBar.newTab().setText(getString(R.string.blood_pressure))
-                .setTabListener(mTabListener);
-        mActionBar.addTab(tab);
-
-        tab = mActionBar.newTab().setText(getString(R.string.proximity))
-                .setTabListener(mTabListener);
-        mActionBar.addTab(tab);
+//
+//        tab = mActionBar.newTab().setText(getString(R.string.blood_pressure))
+//                .setTabListener(mTabListener);
+//        mActionBar.addTab(tab);
+//
+//        tab = mActionBar.newTab().setText(getString(R.string.proximity))
+//                .setTabListener(mTabListener);
+//        mActionBar.addTab(tab);
     }
     
     /** Defining tab listener */

@@ -2,11 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/containerBtnConnect"
     style="@style/containerBtnConnect" >
-    <Button
-       android:id="@+id/btnConnect"
-       style="@style/btnConnect" />
     <ProgressBar
         android:id="@+id/pbSpinnerReadingData"
 	    style="@style/pbSpinnerReadingData" > 
     </ProgressBar>
+
+    <Button
+        android:id="@+id/btnConnect"
+        style="@style/btnConnect"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="51dp" />
+
+    <Button
+        android:id="@+id/btnUpload"
+        style="@style/btnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="24dp"
+        android:layout_toLeftOf="@+id/btnConnect" />
+
 </RelativeLayout>

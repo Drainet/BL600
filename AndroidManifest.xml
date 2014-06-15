@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
@@ -18,11 +19,12 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
+        android:name="com.lairdtech.bl600toolkit.application.BL600Application"
         android:label="@string/app_name"
         android:theme="@style/MyTheme" >
         
         <!-- Main - Disclaimer -->
-        <activity android:name="com.lairdtech.bl600toolkit.activities.DisclaimerActivity"
+        <activity android:name="com.lairdtech.bl600toolkit.activities.FragmentsContainerActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,10 +36,10 @@
         activity which holds all fragments, each fragment represents a full functionality
         for example heart rate, temperature, blood pressure etc
         -->
-        <activity
+    <!--     <activity
             android:name="com.lairdtech.bl600toolkit.activities.FragmentsContainerActivity"
             android:screenOrientation="portrait" >
-        </activity>
+        </activity>-->
         <!-- settings screen -->
         <activity
             android:name="com.lairdtech.bl600toolkit.activities.SettingsActivity"
