@@ -11,11 +11,11 @@ import android.support.v4.view.ViewPager;
 
 public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
     private final int PAGE_COUNT = 1;
-    private ViewPager mPager;
+//    private ViewPager mPager;
 	
 	public MyFragmentPagerAdapter(FragmentManager fm, ViewPager mPager) {
 		super(fm);
-        this.mPager = mPager;
+//        this.mPager = mPager;
 	}
 
 	/** This method will be invoked when a page is requested to create */
@@ -23,8 +23,8 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 	public Fragment getItem(int position) {
 		switch(position){
             case 0:
-            	HeartRateFragment hrFragment = new HeartRateFragment();
-				return hrFragment;
+				TemperatureFragment tempFragment = new TemperatureFragment();
+				return tempFragment;
 //                ChoiceFragment choicesFragment = new ChoiceFragment();
 //                choicesFragment.setPageAdapterForButtons(mPager);
 //                return choicesFragment;

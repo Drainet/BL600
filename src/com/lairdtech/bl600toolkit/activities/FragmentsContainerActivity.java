@@ -89,7 +89,7 @@ public class FragmentsContainerActivity extends FragmentActivity{
 //                .setTabListener(mTabListener);
 //        mActionBar.addTab(tab);
 
-        tab = mActionBar.newTab().setText(getString(R.string.temperature))
+        tab = mActionBar.newTab().setText(getString(R.string.soil_moisture))
                 .setTabListener(mTabListener);
         mActionBar.addTab(tab);
 //

@@ -1,5 +1,7 @@
 package com.lairdtech.bl600toolkit.application;
 
+import java.util.LinkedList;
+
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyLog;
@@ -13,6 +15,7 @@ public class BL600Application extends Application{
      * Log or request TAG
      */
     public static final String TAG = "VolleyPatterns";
+    private static LinkedList<Integer> tempList = new LinkedList<Integer>();
 
     /**
      * Global request queue for Volley
@@ -92,4 +95,12 @@ public class BL600Application extends Application{
             mRequestQueue.cancelAll(tag);
         }
     }
+
+	public static LinkedList<Integer> getTempList() {
+		return tempList;
+	}
+
+	public static void setTempList(LinkedList<Integer> tempList) {
+		BL600Application.tempList = tempList;
+	}
 }

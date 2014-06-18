@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.lairdtech.bl600toolkit.R;
 import com.lairdtech.bl600toolkit.activities.SettingsActivity;
+import com.lairdtech.bl600toolkit.application.BL600Application;
 import com.lairdtech.bl600toolkit.blewrapper.BleCommonCharacteristics;
 import com.lairdtech.bl600toolkit.blewrapper.BleDefinedUUIDs;
 import com.lairdtech.bl600toolkit.blewrapper.BleWrapper;
@@ -170,15 +171,16 @@ public class TemperatureFragment extends Fragment implements BleWrapperUiCallbac
         // update the UI with the new changed values
         if(BleDefinedUUIDs.Characteristic.TEMPERATURE_MEASUREMENT.equals(charUUID)){
             final float result;
+            
             // https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.temperature_measurement.xml
             result = characteristic.getFloatValue(BluetoothGattCharacteristic.FORMAT_FLOAT, 1);
             MyTarget.infoMsg("Temperature: " + result);
-
+            BL600Application.getTempList().add((int)result);
             mGraph.startTimer();
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    tvCharValue.setText("" + result);
+                    tvCharValue.setText("" + result+"%");
                     mGraph.addNewData(result);
                 }
             });

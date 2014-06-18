@@ -1,7 +1,9 @@
 package com.lairdtech.bl600toolkit.target;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -9,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
@@ -131,13 +134,17 @@ public class CommonUiViewsForScreens implements OnClickListener{
 					btnConnect.setText(mActivity.getString(R.string.disconnect));
 					pbSpinnerReadingData.setVisibility(View.INVISIBLE);
 				}
-				if(isUploading){
-					pbSpinnerReadingData.setVisibility(View.VISIBLE);
-				} else if(!isUploading){
-					pbSpinnerReadingData.setVisibility(View.INVISIBLE);
-				}
+				
 			}
 		});
+	}
+	
+	private void invalidateUploadState(){
+		if(isUploading){
+			pbSpinnerReadingData.setVisibility(View.VISIBLE);
+		} else if(!isUploading){
+			pbSpinnerReadingData.setVisibility(View.INVISIBLE);
+		}
 	}
 
 	@Override
@@ -162,27 +169,45 @@ public class CommonUiViewsForScreens implements OnClickListener{
 			}
 			break;
 		case R.id.btnUpload:
-			final String URL = "http://www.google.com";
+			final String URL = "http://embeddedccu.herokuapp.com/api/sensordata";
 			isUploading = true;
-			StringRequest req = new StringRequest(URL, new Response.Listener<String>() {
+			
+			int all = 0;
+			for(Integer temp:BL600Application.getTempList()){
+				all = all + temp;
+			}
+			final int average = all/BL600Application.getTempList().size();
+			BL600Application.getTempList().clear();
+			
+			StringRequest req = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
 				@Override
 				public void onResponse(String response) {
 					VolleyLog.v("Response:%n %s", response);
 					isUploading = false;
-					uiInvalidateBtnState();
+					invalidateUploadState();
 				}
 			}, new Response.ErrorListener() {
 				@Override
 				public void onErrorResponse(VolleyError error) {
 					VolleyLog.e("Error: ", error.getMessage());
 					isUploading = false;
-					uiInvalidateBtnState();
+					invalidateUploadState();
 				}
-			});
+
+			}) {     
+				@Override
+				protected Map<String, String> getParams() 
+				{  
+					Map<String, String>  params = new HashMap<String, String>();  
+					params.put("temp",String.valueOf(average));  
+
+					return params;  
+				}
+			};
 
 			// add the request object to the queue to be executed
 			BL600Application.getInstance().addToRequestQueue(req);
-			uiInvalidateBtnState();
+			invalidateUploadState();
 			break;
 		}
 
